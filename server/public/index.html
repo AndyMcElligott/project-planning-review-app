@@ -7,13 +7,17 @@
     <script src="vendors/jquery.min.js"></script>
     <script src="scripts/client.js"></script>
     <link rel="stylesheet" href="styles/styles.css" />
-    <link rel="stylesheet" type="text/css" href="./vendors/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="styles/bootstrap.css" />
     <title>Snow Tracker-O-Matic</title>
   </head>
-  <body>
+  <body class="container text-center">
+    <h1 class="jumbotron" id="jumbotron">Snow Tracker-O-Matic</h1>
     <div class="inputDiv">
       <label id="inputDateLabel">Date</label>
       <input type="date" class="inputDate" />
+      <label id="snowAmtLabel">Snow Total</label>
+      <input type="number" class="snowAmt" />
+      <button class="submitBtn">Submit</button>
     </div>
     <div class="historyDiv"></div>
   </body>
