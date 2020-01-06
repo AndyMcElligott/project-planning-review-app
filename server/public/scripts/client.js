@@ -30,4 +30,24 @@ function dataToAdd() {
   // empty out user inputs
   $('.inputDate').val('');
   $('.snowAmt').val('');
+
+  // make server request
+  $.ajax({
+    method: 'POST',
+    url: '/sendSnow',
+    data: dataToSend,
+  }).then(function(reponse) {
+    console.log(reponse);
+    // call GET route func here
+    getSnowHistory();
+  });
+}
+
+function getSnowHistory() {
+  $.ajax({
+    method: 'GET',
+    url: '/getSnowHistory',
+  }).then(function(reponse) {
+    // call function to display previous inputs here
+  });
 }
